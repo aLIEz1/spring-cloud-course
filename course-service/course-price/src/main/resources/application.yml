@@ -1,0 +1,27 @@
+server:
+  port: 8083
+spring:
+  data:
+  datasource:
+    url: jdbc:mysql://localhost:3306/course?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 74521
+  application:
+    name: course-price
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+#course-list:
+#  ribbon:
+#    NFLoadBanlancerRuleClassName: com.netflix.loadbanlancer.RoundRobinRule
+
+#打开断路功能
+feign:
+  hystrix:
+    enabled: true

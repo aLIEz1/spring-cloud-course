@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+course-service/course-list/src/test/
+course-service/course-price/src/test/
